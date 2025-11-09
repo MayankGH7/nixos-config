@@ -1,0 +1,27 @@
+# general.import = [ "~/.config/omarchy/current/theme/alacritty.toml" ]
+
+[terminal]
+# shell = "/bin/zsh"
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+normal = { family = "JetBrainsMono Nerd Font", style="bold" }
+bold = { family = "JetBrainsMono Nerd Font", style="bold" }
+italic = { family = "JetBrainsMono Nerd Font", style="bold"  }
+size = 17
+
+[window]
+padding.x = 10
+padding.y = 10
+# decorations = "None"
+opacity = 0.80
+
+[keyboard]
+bindings = [
+{ key = "F11", action = "ToggleFullscreen" },
+{ key = "Insert", mods = "Shift", action = "Paste" },
+{ key = "Insert", mods = "Control", action = "Copy" }
+]
+
