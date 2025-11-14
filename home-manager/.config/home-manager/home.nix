@@ -1,11 +1,9 @@
-{ config, pkgs, vicinae, ... }:
+{ config, pkgs, vicinae, mangowc, wiremix, ... }:
 
 {
   home.username = "mynk";
   home.homeDirectory = "/home/mynk";
-
   home.stateVersion = "24.11";
-
 
   gtk = {
     enable = true;
@@ -41,6 +39,8 @@
   home.packages = [
     pkgs.gh
     vicinae.packages.${pkgs.system}.default
+    mangowc.packages.${pkgs.system}.default
+    wiremix.packages.${pkgs.system}.default
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -69,6 +69,7 @@
     # '';
     ".config/niri/config.kdl".source = dotfiles/config.kdl;
     ".config/alacritty/alacritty.toml".source = dotfiles/alacritty.toml;
+    ".config/alacritty/catppuccin-mocha.toml".source = ./dotfiles/catppuccin-mocha.toml;
   };
 
   # Home Manager can also manage your environment variables through

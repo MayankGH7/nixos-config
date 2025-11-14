@@ -95,6 +95,10 @@
 	nautilus
 	fastfetch
 	btop
+	gcc
+	clang
+	zig
+	stylua
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

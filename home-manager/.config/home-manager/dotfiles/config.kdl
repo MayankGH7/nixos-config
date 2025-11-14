@@ -272,7 +272,7 @@ layout {
 // spawn-at-startup "elephant"
 // spawn-at-startup "swayosd-server"
 // spawn-at-startup "walker --gapplication-service"
-spawn-sh-at-startup "swaybg -i ~/Pictures/Wallpapers/frieren.jpg"
+spawn-sh-at-startup "swaybg -i ~/Pictures/Wallpapers/coffee.jpg"
 spawn-sh-at-startup "vicinae server"
 // spawn-sh-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 
