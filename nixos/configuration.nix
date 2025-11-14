@@ -3,7 +3,7 @@
 {
   imports =
     [
-      ./hardware-configuration.nix
+      /etc/nixos/hardware-configuration.nix
     ];
 
   boot.loader.systemd-boot.enable = true;
@@ -98,7 +98,7 @@
 	gcc
 	clang
 	zig
-	stylua
+	waybar
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -116,6 +116,7 @@
     ohMyZsh = {
       enable = true;
       theme = "robbyrussell";
+      # theme = "refined";
       plugins = [ "git" "z" "sudo"];
     };
     shellAliases = {
@@ -128,9 +129,19 @@
     enableSSHSupport = true;
   };
 
-  fonts.packages = with pkgs; [
-    nerd-fonts.jetbrains-mono
-  ];
+
+  fonts = {
+    fontDir.enable = true;
+    packages = with pkgs; [
+      nerd-fonts.jetbrains-mono
+	noto-fonts
+	noto-fonts-cjk-sans
+	noto-fonts-cjk-serif
+	noto-fonts-color-emoji
+	noto-fonts-lgc-plus
+    ];
+  };
+
 
   # List services that you want to enable:
   services.openssh.enable = true;
