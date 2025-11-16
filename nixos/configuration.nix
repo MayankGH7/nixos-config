@@ -5,6 +5,12 @@
     [
       /etc/nixos/hardware-configuration.nix
     ];
+  
+  nix.settings = {
+	  extra-substituters = [ "https://vicinae.cachix.org" ];
+	  extra-trusted-public-keys = [ "vicinae.cachix.org-1:1kDrfienkGHPYbkpNj1mWTr7Fm1+zcenzgTizIcI3oc=" ];
+
+  };
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -99,6 +105,7 @@
 	clang
 	zig
 	waybar
+	stow
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
